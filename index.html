@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โครงงานระบบควบคุมพัดลมอัตโนมัติด้วย WiFi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d1117; /* สีพื้นหลังเหมือน GitHub dark mode */
+            color: white; /* สีตัวอักษรเป็นสีขาว */
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            background-color: #161b22; /* สีพื้นหลังของคอนเทนเนอร์ */
+            padding: 20px;
+            margin-top: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1, h2 {
+            color: #f0f0f0; /* สีหัวข้อ */
+        }
+
+        .section {
+            background-color: #2d333b; /* สีพื้นหลังของแต่ละส่วน */
+            padding: 15px;
+            border-left: 5px solid #007bff;
+            margin-bottom: 20px;
+        }
+
+        .members p {
+            margin: 5px 0;
+        }
+
+        .members p strong {
+            display: inline-block;
+            width: 150px;
+        }
+
+        .nav-buttons {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .nav-buttons a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #007bff; /* สีปุ่ม */
+            color: white; /* สีตัวอักษรในปุ่ม */
+            margin: 0 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .nav-buttons a:hover {
+            background-color: #0056b3; /* สีเมื่อวางเมาส์บนปุ่ม */
+        }
+
+        pre {
+            background-color: #0d1117; /* สีพื้นหลังของ code block */
+            color: #f5bde6; /* สีตัวอักษรใน code block เป็นสีชมพูอ่อน */
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto; /* สามารถเลื่อนโค้ดได้เมื่อเกินขนาดหน้าจอ */
+        }
+
+        /* CSS สำหรับสีของข้อความภาษาไทยและคอมเมนต์ */
+        .green-text {
+            color: #228B22; /* สีเขียวเข้ม */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>โครงงานระบบควบคุมพัดลมอัตโนมัติด้วย WiFi</h1>
+
+        <!-- ปุ่มนำทาง -->
+        <div class="nav-buttons">
+            <a href="#abstract">บทคัดย่อ</a>
+            <a href="#purpose">จุดประสงค์ของโครงงาน</a>
+            <a href="#details">รายละเอียดของโครงงาน</a>
+            <a href="#members">สมาชิกกลุ่ม</a>
+            <a href="#sourcecode">Source code</a>
+        </div>
+
+        <!-- บทคัดย่อ -->
+        <div class="section" id="abstract">
+            <h2>บทคัดย่อ</h2>
+            <p>
+                โครงงานระบบควบคุมพัดลมอัตโนมัติด้วย WiFi (Automatic-fan-control) ได้รับการพัฒนาเพื่อเพิ่มความสะดวกสบายและช่วยลดการใช้พลังงาน โดยระบบจะเปิดหรือปิดพัดลมโดยอัตโนมัติตามค่าที่กำหนดของอุณหภูมิที่ตรวจวัดจากเซนเซอร์ ผู้ใช้สามารถควบคุมการทำงานของพัดลมจากระยะไกลผ่าน WiFi และปรับค่าการทำงานตามต้องการได้ง่ายๆ ผ่านสมาร์ทโฟนหรือเว็บอินเตอร์เฟซ
+            </p>
+        </div>
+
+        <!-- จุดประสงค์ของโครงงาน -->
+        <div class="section" id="purpose">
+            <h2>จุดประสงค์ของโครงงาน</h2>
+            <p>
+                ระบบจะตรวจสอบอุณหภูมิและควบคุมพัดลมตามค่าอุณหภูมิที่กำหนดล่วงหน้า เพื่อเพิ่มความสะดวกสบายและลดการใช้พลังงาน
+            </p>
+        </div>
+
+        <!-- รายละเอียดของโครงงาน -->
+        <div class="section" id="details">
+            <h2>รายละเอียดของโครงงาน</h2>
+            <h3>อุปกรณ์ที่ใช้:</h3>
+            <ul>
+                <li>Arduino Uno R4 WiFi: บอร์ดควบคุมหลักที่รองรับการเชื่อมต่อ WiFi</li>
+                <li>DHT11 หรือ DHT22: เซนเซอร์สำหรับวัดอุณหภูมิและความชื้น</li>
+                <li>Relay Module: สำหรับเปิด-ปิดการทำงานของพัดลม</li>
+            </ul>
+
+            <h3>ฟังก์ชันการทำงาน:</h3>
+            <ul>
+                <li>การตรวจสอบอุณหภูมิ: เซนเซอร์ DHT11/DHT22 ทำหน้าที่ตรวจวัดอุณหภูมิในห้องและส่งข้อมูลไปยัง Arduino</li>
+                <li>การควบคุมพัดลม: 
+                    <ul>
+                        <li>หากอุณหภูมิสูงกว่าค่าที่กำหนด เช่น 30°C ระบบจะสั่งเปิดพัดลมผ่านรีเลย์</li>
+                        <li>หากอุณหภูมิลดลงต่ำกว่า 28°C ระบบจะสั่งปิดพัดลมโดยอัตโนมัติ</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Source code -->
+        <div class="section" id="sourcecode">
+            <h2>Source code</h2>
+            <pre><code>
+#include &lt;DHT.h&gt;
+
+#define DHTPIN 2
+#define DHTTYPE DHT11
+DHT dht(DHTPIN, DHTTYPE);
+
+int relayPin = 7;     <span class="green-text">// Pin ที่เชื่อมต่อกับ Relay</span>
+float tempThreshold = 30.0;  <span class="green-text">// อุณหภูมิที่พัดลมจะเปิด (ปรับได้)</span>
+
+void setup() {
+  pinMode(relayPin, OUTPUT);   <span class="green-text">// ตั้งค่า pin relay เป็น output</span>
+  digitalWrite(relayPin, HIGH); <span class="green-text">// ปิดพัดลมในตอนเริ่มต้น</span>
+  dht.begin();                 <span class="green-text">// เริ่มต้นการทำงานของ DHT</span>
+  Serial.begin(9600);          <span class="green-text">// เริ่มต้น serial communication เพื่อดูค่า</span>
+}
+
+void loop() {
+  // อ่านค่าอุณหภูมิจากเซ็นเซอร์
+  float temperature = dht.readTemperature();
+  
+  // ตรวจสอบว่าการอ่านถูกต้อง
+  if (isnan(temperature)) {
+    Serial.println("Failed to read from DHT sensor!");
+    return;
+  }
+
+  // แสดงค่าอุณหภูมิใน Serial Monitor
+  Serial.print("Temperature: ");
+  Serial.print(temperature);
+  Serial.println(" *C");
+
+  // ควบคุมพัดลมตามอุณหภูมิ
+  if (temperature >= tempThreshold) {
+    digitalWrite(relayPin, LOW);  <span class="green-text">// เปิดพัดลม</span>
+  } else {
+    digitalWrite(relayPin, HIGH);   <span class="green-text">// ปิดพัดลม</span>
+  }
+
+  delay(2000); <span class="green-text">// หน่วงเวลา 2 วินาทีเพื่ออ่านค่าใหม่</span>
+}
+            </code></pre>
+        </div>
+
+        <!-- สมาชิกกลุ่ม -->
+        <div class="section" id="members">
+            <h2>สมาชิกกลุ่ม</h2>
+            <p><strong>66070150:</strong> นายภัทร์สพล ตั้งจรัสพณิชกุล</p>
+            <p><strong>66070152:</strong> นายภากร นัยวัฒน์</p>
+            <p><strong>66070313:</strong> นายสหรัฐ รัตนไชย</p>
+        </div>
+    </div>
+</body>
+</html>
