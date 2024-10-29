@@ -3,38 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>โครงงานระบบควบคุมพัดลมอัตโนมัติด้วย WiFi</title>
+    <title>โครงงานระบบควบคุมพัดลมอัตโนมัติ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #0d1117; /* สีพื้นหลังเหมือน GitHub dark mode */
-            color: white; /* สีตัวอักษรเป็นสีขาว */
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-size: 1.15rem; /* Slightly increased font size */
         }
 
         .container {
             width: 80%;
             margin: auto;
-            background-color: #161b22; /* สีพื้นหลังของคอนเทนเนอร์ */
-            padding: 20px;
-            margin-top: 50px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            background-color: #161b22;
+            padding: 40px;
+            margin-top: 60px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         h1, h2 {
-            color: #f0f0f0; /* สีหัวข้อ */
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center; /* Centering the title */
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        /* Centered Image */
+        .centered-image {
+            display: block;
+            margin: 20px auto; /* Centering the image */
+            max-width: 50%; /* Adjusting size to be smaller */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         .section {
-            background-color: #2d333b; /* สีพื้นหลังของแต่ละส่วน */
-            padding: 15px;
-            border-left: 5px solid #007bff;
-            margin-bottom: 20px;
+            background-color: #21262d;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
         }
 
         .members p {
-            margin: 5px 0;
+            margin: 10px 0;
+            font-size: 1.2rem; /* Slightly increased font size */
         }
 
         .members p strong {
@@ -43,61 +69,76 @@
         }
 
         .nav-buttons {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             text-align: center;
         }
 
         .nav-buttons a {
             text-decoration: none;
-            padding: 10px 20px;
-            background-color: #007bff; /* สีปุ่ม */
-            color: white; /* สีตัวอักษรในปุ่ม */
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
             margin: 0 10px;
-            border-radius: 5px;
-            font-size: 16px;
+            border-radius: 30px;
+            font-size: 1.2rem; /* Slightly increased font size */
+            transition: background-color 0.3s ease;
         }
 
         .nav-buttons a:hover {
-            background-color: #0056b3; /* สีเมื่อวางเมาส์บนปุ่ม */
+            background-color: #0056b3;
         }
 
         pre {
-            background-color: #0d1117; /* สีพื้นหลังของ code block */
-            color: #f5bde6; /* สีตัวอักษรใน code block เป็นสีชมพูอ่อน */
-            padding: 15px;
-            border-radius: 5px;
-            overflow-x: auto; /* สามารถเลื่อนโค้ดได้เมื่อเกินขนาดหน้าจอ */
+            background-color: #0d1117;
+            color: #c9d1d9;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-size: 1rem;
         }
 
-        /* CSS สำหรับสีของข้อความภาษาไทยและคอมเมนต์ */
+        /* Green comments */
         .green-text {
-            color: #228B22; /* สีเขียวเข้ม */
+            color: #27ae60;
+        }
+
+        /* Smooth scrolling for navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Smooth hover effect for buttons */
+        a {
+            transition: background-color 0.3s ease;
         }
 
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>โครงงานระบบควบคุมพัดลมอัตโนมัติด้วย WiFi</h1>
+        <h1>โครงงานระบบควบคุมพัดลมอัตโนมัติ</h1>
 
-        <!-- ปุ่มนำทาง -->
+        <!-- Centered Image -->
+        <img src="1730190590694.jpg" alt="Project Image" class="centered-image">
+
+        <!-- Navigation Buttons -->
         <div class="nav-buttons">
             <a href="#abstract">บทคัดย่อ</a>
             <a href="#purpose">จุดประสงค์ของโครงงาน</a>
             <a href="#details">รายละเอียดของโครงงาน</a>
-            <a href="#members">สมาชิกกลุ่ม</a>
             <a href="#sourcecode">Source code</a>
+            <a href="#members">สมาชิกกลุ่ม</a>
         </div>
 
-        <!-- บทคัดย่อ -->
+        <!-- Abstract Section -->
         <div class="section" id="abstract">
             <h2>บทคัดย่อ</h2>
             <p>
-                โครงงานระบบควบคุมพัดลมอัตโนมัติด้วย WiFi (Automatic-fan-control) ได้รับการพัฒนาเพื่อเพิ่มความสะดวกสบายและช่วยลดการใช้พลังงาน โดยระบบจะเปิดหรือปิดพัดลมโดยอัตโนมัติตามค่าที่กำหนดของอุณหภูมิที่ตรวจวัดจากเซนเซอร์ ผู้ใช้สามารถควบคุมการทำงานของพัดลมจากระยะไกลผ่าน WiFi และปรับค่าการทำงานตามต้องการได้ง่ายๆ ผ่านสมาร์ทโฟนหรือเว็บอินเตอร์เฟซ
+                โปรเจ็กต์ระบบควบคุมพัดลมอัตโนมัติใช้ Arduino Uno R4 WiFi ร่วมกับเซนเซอร์ DHT11 หรือ DHT22 ในการวัดอุณหภูมิและความชื้น ระบบจะเปิดหรือปิดพัดลมโดยอัตโนมัติตามอุณหภูมิที่ตรวจวัดได้ หากอุณหภูมิสูงเกินค่าที่ตั้งไว้ พัดลมจะเปิดทำงาน และเมื่ออุณหภูมิลดลงต่ำกว่าค่าที่กำหนด พัดลมจะปิด การทำงานนี้ช่วยเพิ่มความสะดวกสบายและประหยัดพลังงาน ทั้งยังสามารถนำไปพัฒนาเป็นระบบอื่นๆ ได้อีกด้วย
             </p>
         </div>
 
-        <!-- จุดประสงค์ของโครงงาน -->
+        <!-- Purpose Section -->
         <div class="section" id="purpose">
             <h2>จุดประสงค์ของโครงงาน</h2>
             <p>
@@ -105,12 +146,12 @@
             </p>
         </div>
 
-        <!-- รายละเอียดของโครงงาน -->
+        <!-- Project Details -->
         <div class="section" id="details">
             <h2>รายละเอียดของโครงงาน</h2>
             <h3>อุปกรณ์ที่ใช้:</h3>
             <ul>
-                <li>Arduino Uno R4 WiFi: บอร์ดควบคุมหลักที่รองรับการเชื่อมต่อ WiFi</li>
+                <li>Arduino Uno R4 WiFi: บอร์ดควบคุมหลักสำหรับรับคำสั่งจากโค้ด</li>
                 <li>DHT11 หรือ DHT22: เซนเซอร์สำหรับวัดอุณหภูมิและความชื้น</li>
                 <li>Relay Module: สำหรับเปิด-ปิดการทำงานของพัดลม</li>
             </ul>
@@ -127,7 +168,7 @@
             </ul>
         </div>
 
-        <!-- Source code -->
+        <!-- Source Code -->
         <div class="section" id="sourcecode">
             <h2>Source code</h2>
             <pre><code>
@@ -148,21 +189,21 @@ void setup() {
 }
 
 void loop() {
-  // อ่านค่าอุณหภูมิจากเซ็นเซอร์
+    <span class="green-text">// อ่านค่าอุณหภูมิจากเซ็นเซอร์</span>
   float temperature = dht.readTemperature();
   
-  // ตรวจสอบว่าการอ่านถูกต้อง
+  <span class="green-text">// ตรวจสอบว่าการอ่านถูกต้อง</span>
   if (isnan(temperature)) {
     Serial.println("Failed to read from DHT sensor!");
     return;
   }
 
-  // แสดงค่าอุณหภูมิใน Serial Monitor
+  <span class="green-text">// แสดงค่าอุณหภูมิใน Serial Monitor</span>
   Serial.print("Temperature: ");
   Serial.print(temperature);
   Serial.println(" *C");
 
-  // ควบคุมพัดลมตามอุณหภูมิ
+  <span class="green-text">// ควบคุมพัดลมตามอุณหภูมิ</span>
   if (temperature >= tempThreshold) {
     digitalWrite(relayPin, LOW);  <span class="green-text">// เปิดพัดลม</span>
   } else {
@@ -174,12 +215,13 @@ void loop() {
             </code></pre>
         </div>
 
-        <!-- สมาชิกกลุ่ม -->
+        <!-- Group Members -->
         <div class="section" id="members">
             <h2>สมาชิกกลุ่ม</h2>
             <p><strong>66070150:</strong> นายภัทร์สพล ตั้งจรัสพณิชกุล</p>
             <p><strong>66070152:</strong> นายภากร นัยวัฒน์</p>
             <p><strong>66070313:</strong> นายสหรัฐ รัตนไชย</p>
+            <img src="oh-my-goodness-gracious-oh-my-goodness.gif" alt="Oh my goodness gif" />
         </div>
     </div>
 </body>
