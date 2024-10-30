@@ -10,15 +10,15 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #0d1117;
-            color: #c9d1d9;
+            background-color: #010409; /* Darker background */
+            color: #b1bac4; /* Slightly darker text */
             font-size: 1.15rem; /* Slightly increased font size */
         }
 
         .container {
             width: 80%;
             margin: auto;
-            background-color: #161b22;
+            background-color: #0d1117; /* Darker container */
             padding: 40px;
             margin-top: 60px;
             border-radius: 15px;
@@ -26,7 +26,7 @@
         }
 
         h1, h2 {
-            color: #ffffff;
+            color: #f0f6fc; /* Lighter heading color */
             font-weight: 600;
         }
 
@@ -52,7 +52,7 @@
         }
 
         .section {
-            background-color: #21262d;
+            background-color: #161b22; /* Darker section backgrounds */
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 30px;
@@ -76,7 +76,7 @@
         .nav-buttons a {
             text-decoration: none;
             padding: 12px 25px;
-            background-color: #007bff;
+            background-color: #238636; /* Darker green for buttons */
             color: white;
             margin: 0 10px;
             border-radius: 30px;
@@ -85,12 +85,12 @@
         }
 
         .nav-buttons a:hover {
-            background-color: #0056b3;
+            background-color: #2ea043; /* Slightly lighter green on hover */
         }
 
         pre {
-            background-color: #0d1117;
-            color: #c9d1d9;
+            background-color: #161b22; /* Darker code block background */
+            color: #b1bac4; /* Darker code text */
             padding: 20px;
             border-radius: 10px;
             overflow-x: auto;
@@ -111,7 +111,6 @@
         a {
             transition: background-color 0.3s ease;
         }
-
     </style>
 </head>
 <body>
@@ -210,11 +209,10 @@ void loop() {
     digitalWrite(relayPin, HIGH);   <span class="green-text">// ปิดพัดลม</span>
   }
 
-  delay(2000); <span class="green-text">// หน่วงเวลา 2 วินาทีเพื่ออ่านค่าใหม่</span>
+  delay(2000);  <span class="green-text">// รอ 2 วินาทีก่อนอ่านค่าใหม่</span>
 }
             </code></pre>
         </div>
-
         <!-- Group Members -->
         <div class="section" id="members">
             <h2>สมาชิกกลุ่ม</h2>
